@@ -1,6 +1,6 @@
 #include <iostream>
-#define COMPLEX_NUM_H
 #ifndef COMPLEX_NUM_H
+#define COMPLEX_NUM_H
 class ComplexNum {
 private:
 double mRe = 0; 
