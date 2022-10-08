@@ -43,7 +43,7 @@ ComplexNum ComplexNum:: operator* (const int k)
   return ComplexNum(mRe * k , mIm * k);
 }
 
- std::ostream &operator<<(std::ostream &, ComplexNum &){
+ std::ostream &operator<<(std::ostream &out, ComplexNum &c){
  out << c.mRe << "+" << c.mIm << + "i" << std::endl;
  return out;
  }
