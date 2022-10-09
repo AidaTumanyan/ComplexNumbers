@@ -1,10 +1,11 @@
 #include "ComplexNum.h"
 #include <vector>
+#include <algorithm>
 #include <iostream>
 
 int main(){
    ComplexNum first{5,6};
-   ComplexNum second{1,5}
+   ComplexNum second{1,5};
    ComplexNum third{4,6};
   
    std::vector<ComplexNum> vec;
@@ -17,7 +18,7 @@ int main(){
     {
         for(int j = 0; j < vec.size(); j++)
         {
-            if(vec[j] > vec[j+1])
+            if(vec[j].getModulus() > vec[j+1].getModulus())
             {
                 int temp = vec[j];
                 vec[j] = vec[j+1];
@@ -26,10 +27,11 @@ int main(){
         }
     }
 
-}
+
    for(int i = 0; i < vec.size(); i++){
    
 	   std::cout<<vec[i];	  
 
    }
 
+}
