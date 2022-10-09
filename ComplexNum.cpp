@@ -13,17 +13,7 @@ ComplexNum::ComplexNum(const double& re, const double& im)
 	, mIm{ im }
 {}
 
-double ComplexNum::getModulus(){
-	return sqrt(mRe * mRe + mIm * mIm);
-}
 
-double ComplexNum::getRe() {
-	return mRe;
-}
-
-double ComplexNum::getIm() {
-	return mIm;
-}
  ComplexNum ComplexNum:: operator+(const ComplexNum& other)
 {
   float result_real=mRe+other.mRe;
@@ -38,12 +28,26 @@ ComplexNum ComplexNum:: operator-(const ComplexNum& other)
   return ComplexNum(result_real,result_img);
 }
 
-ComplexNum ComplexNum:: operator* (const int k)
+ComplexNum ComplexNum:: operator* ( int k)
 {
   return ComplexNum(mRe * k , mIm * k);
 }
 
  std::ostream &operator<<(std::ostream &out, ComplexNum &c){
- out << c.mRe << "+" << c.mIm << + "i" << std::endl;
- return out;
+ 
+   out << c.mRe << "+" << c.mIm << + "i" << std::endl;
+   return out;
+
  }
+
+double ComplexNum::getModulus(){
+	return sqrt(mRe * mRe + mIm * mIm);
+}
+
+double ComplexNum::getRe() {
+	return mRe;
+}
+
+double ComplexNum::getIm() {
+	return mIm;
+}
