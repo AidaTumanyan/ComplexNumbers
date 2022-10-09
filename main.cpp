@@ -16,13 +16,13 @@ int main(){
   
    for(int i = 0; i < vec.size(); i++)
     {
-        for(int j = 0; j < vec.size(); j++)
+        for(int j = 0; j < vec.size()-1; j++)
         {
             if(vec[j].getModulus() > vec[j+1].getModulus())
             {
-                int temp = vec[j];
+                ComplexNum temp = vec[j];
                 vec[j] = vec[j+1];
-                vec[j+1] = vec;
+                vec[j+1] = temp;
             }
         }
     }
