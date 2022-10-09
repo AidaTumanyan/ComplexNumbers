@@ -21,9 +21,9 @@ public:
 
 ComplexNum operator-(const ComplexNum& other);
 
-ComplexNum operator* (const int k);
+ComplexNum operator* ( int k);
 
-friend std::ostream &operator<<(std::ostream &, ComplexNum);
+friend std::ostream &operator<<(std::ostream &, ComplexNum&);
 
 };
 
